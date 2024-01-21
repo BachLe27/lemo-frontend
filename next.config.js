@@ -25,6 +25,20 @@ const nextConfig = withStoreConfig({
         protocol: "https",
         hostname: "medusa-server-testing.s3.us-east-1.amazonaws.com",
       },
+      {
+        protocol: "https",
+        hostname: "www.gpt-judge.online",
+      },
+      {
+        protocol: "https",
+        hostname: "gpt-judge.online",
+      },
+      {
+        protocol: "http",
+        hostname: "http://34.134.214.237",
+        port: '9000',
+        pathname: '/uploads/**'
+      }
     ],
   },
 })

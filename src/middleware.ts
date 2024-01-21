@@ -15,7 +15,7 @@ async function getCountryCode(
 ) {
   try {
     let countryCode
-
+    return 'vn'
     const vercelCountryCode = request.headers
       .get("x-vercel-ip-country")
       ?.toLowerCase()
@@ -32,7 +32,7 @@ async function getCountryCode(
       countryCode = regionMap.keys().next().value
     }
 
-    return countryCode
+    
   } catch (error) {
     if (process.env.NODE_ENV === "development") {
       console.error(
@@ -61,7 +61,8 @@ async function listCountries() {
       })
     })
 
-    return regionMap
+    // return regionMap
+    return 'vn'
   } catch (error) {
     if (process.env.NODE_ENV === "development") {
       console.error(

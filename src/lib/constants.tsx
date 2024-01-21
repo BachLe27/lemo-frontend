@@ -27,7 +27,11 @@ export const paymentInfoMap: Record<
     icon: <PayPal />,
   },
   manual: {
-    title: "Test payment",
+    title: "COD (Thanh toán khi giao hàng)",
+    icon: <CreditCard />,
+  },
+  test: {
+    title: "COD (Thanh toán khi giao hàng)",
     icon: <CreditCard />,
   },
   // Add more payment providers here

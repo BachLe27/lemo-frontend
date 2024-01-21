@@ -206,7 +206,7 @@ const Payment = ({
                     <Tooltip content="You can add a user-friendly name and icon for this payment provider in 'src/modules/checkout/components/payment/index.tsx'" />
                   )}
               </div>
-              <div className="flex flex-col w-1/3">
+              {/* <div className="flex flex-col w-1/3">
                 <Text className="txt-medium-plus text-ui-fg-base mb-1">
                   Payment details
                 </Text>
@@ -222,7 +222,7 @@ const Payment = ({
                       : "Another step will appear"}
                   </Text>
                 </div>
-              </div>
+              </div> */}
             </div>
           )}
         </div>

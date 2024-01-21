@@ -1,5 +1,6 @@
 import { Github } from "@medusajs/icons"
 import { Button, Heading } from "@medusajs/ui"
+import Link from "next/link"
 
 const Hero = () => {
   return (
@@ -10,24 +11,22 @@ const Hero = () => {
             level="h1"
             className="text-3xl leading-10 text-ui-fg-base font-normal"
           >
-            Ecommerce Starter Template
+            Lemo Store
           </Heading>
           <Heading
             level="h2"
             className="text-3xl leading-10 text-ui-fg-subtle font-normal"
           >
-            Powered by Medusa and Next.js
+            Always by your side
           </Heading>
         </span>
-        <a
-          href="https://github.com/medusajs/nextjs-starter-medusa"
-          target="_blank"
+        <Link
+          href="/store"
         >
           <Button variant="secondary">
-            View on GitHub
-            <Github />
+            Tìm kiếm len ngay
           </Button>
-        </a>
+        </Link>
       </div>
     </div>
   )

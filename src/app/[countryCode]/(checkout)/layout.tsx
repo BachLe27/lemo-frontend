@@ -24,10 +24,10 @@ export default function CheckoutLayout({
             </span>
           </LocalizedClientLink>
           <LocalizedClientLink
-            href="/"
+            href="/store"
             className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
           >
-            Medusa Store
+            Lemo Store
           </LocalizedClientLink>
           <div className="flex-1 basis-0" />
         </nav>

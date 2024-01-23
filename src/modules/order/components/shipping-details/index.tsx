@@ -12,12 +12,12 @@ const ShippingDetails = ({ order }: ShippingDetailsProps) => {
   return (
     <div>
       <Heading level="h2" className="flex flex-row text-3xl-regular my-6">
-        Delivery
+        Vận chuyển
       </Heading>
       <div className="flex items-start gap-x-8">
         <div className="flex flex-col w-1/3">
           <Text className="txt-medium-plus text-ui-fg-base mb-1">
-            Shipping Address
+            Địa chỉ giao hàng
           </Text>
           <Text className="txt-medium text-ui-fg-subtle">
             {order.shipping_address.first_name}{" "}
@@ -28,15 +28,16 @@ const ShippingDetails = ({ order }: ShippingDetailsProps) => {
             {order.shipping_address.address_2}
           </Text>
           <Text className="txt-medium text-ui-fg-subtle">
-            {order.shipping_address.postal_code}, {order.shipping_address.city}
+            {order.shipping_address.city},{" "}
+            {order.shipping_address.province} 
           </Text>
-          <Text className="txt-medium text-ui-fg-subtle">
+          {/* <Text className="txt-medium text-ui-fg-subtle">
             {order.shipping_address.country_code?.toUpperCase()}
-          </Text>
+          </Text> */}
         </div>
 
         <div className="flex flex-col w-1/3 ">
-          <Text className="txt-medium-plus text-ui-fg-base mb-1">Contact</Text>
+          <Text className="txt-medium-plus text-ui-fg-base mb-1">Liên hệ</Text>
           <Text className="txt-medium text-ui-fg-subtle">
             {order.shipping_address.phone}
           </Text>
@@ -44,7 +45,7 @@ const ShippingDetails = ({ order }: ShippingDetailsProps) => {
         </div>
 
         <div className="flex flex-col w-1/3">
-          <Text className="txt-medium-plus text-ui-fg-base mb-1">Method</Text>
+          <Text className="txt-medium-plus text-ui-fg-base mb-1">Hình thức</Text>
           <Text className="txt-medium text-ui-fg-subtle">
             {order.shipping_methods[0].shipping_option?.name} (
             {formatAmount({

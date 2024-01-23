@@ -110,7 +110,7 @@ const Payment = ({
             }
           )}
         >
-          Payment
+          Phương thức thanh toán
           {!isOpen && paymentReady && <CheckCircleSolid />}
         </Heading>
         {!isOpen && paymentReady && (
@@ -119,7 +119,7 @@ const Payment = ({
               onClick={handleEdit}
               className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
             >
-              Edit
+              Sửa
             </button>
           </Text>
         )}
@@ -178,7 +178,7 @@ const Payment = ({
               isLoading={isLoading}
               disabled={(isStripe && !cardComplete) || !cart.payment_session}
             >
-              Continue to review
+              Tiếp tục
             </Button>
           </div>
         ) : (

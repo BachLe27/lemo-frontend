@@ -20,7 +20,6 @@ export default async function Nav() {
               <SideMenu regions={regions} />
             </div> */}
             <Link href='/store'>Store</Link>
-            <Link href='/account/orders'>History</Link>
           </div>
 
           <div className="flex items-center h-full">
@@ -47,7 +46,7 @@ export default async function Nav() {
                 className="hover:text-ui-fg-base"
                 href="/account"
               >
-                Account
+                Tài khoản
               </LocalizedClientLink>
             </div>
             <Suspense

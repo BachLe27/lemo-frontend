@@ -32,7 +32,7 @@ const Review = ({
             }
           )}
         >
-          Review
+          Xác nhận
         </Heading>
       </div>
       {isOpen && previousStepsCompleted && (
@@ -40,10 +40,7 @@ const Review = ({
           <div className="flex items-start gap-x-1 w-full mb-6">
             <div className="w-full">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                By clicking the Place Order button, you confirm that you have
-                read, understand and accept our Terms of Use, Terms of Sale and
-                Returns Policy and acknowledge that you have read Medusa
-                Store&apos;s Privacy Policy.
+                Bằng cách nhấp vào nút Đặt hàng, bạn xác nhận rằng bạn đã đọc, hiểu và chấp nhận Điều khoản sử dụng, Điều khoản bán hàng và Chính sách trả lại của chúng tôi cũng như xác nhận rằng bạn đã đọc Chính sách quyền riêng tư của Lemo Store.
               </Text>
             </div>
           </div>

@@ -17,7 +17,7 @@ const Overview = ({ customer, orders }: OverviewProps) => {
         <div className="text-xl-semi flex justify-between items-center mb-4">
           <span>Hello {customer?.first_name}</span>
           <span className="text-small-regular text-ui-fg-base">
-            Signed in as:{" "}
+            Đăng nhập với:{" "}
             <span className="font-semibold">{customer?.email}</span>
           </span>
         </div>
@@ -51,7 +51,7 @@ const Overview = ({ customer, orders }: OverviewProps) => {
 
             <div className="flex flex-col gap-y-4">
               <div className="flex items-center gap-x-2">
-                <h3 className="text-large-semi">Recent orders</h3>
+                <h3 className="text-large-semi">Đơn hàng gần đây</h3>
               </div>
               <ul className="flex flex-col gap-y-4">
                 {orders && orders.length > 0 ? (
@@ -65,10 +65,10 @@ const Overview = ({ customer, orders }: OverviewProps) => {
                             <div className="grid grid-cols-3 grid-rows-2 text-small-regular gap-x-4 flex-1">
                               <span className="font-semibold">Date placed</span>
                               <span className="font-semibold">
-                                Order number
+                                Mã đơn hàng
                               </span>
                               <span className="font-semibold">
-                                Total amount
+                                Tổng tiền
                               </span>
                               <span>
                                 {new Date(order.created_at).toDateString()}
@@ -84,7 +84,7 @@ const Overview = ({ customer, orders }: OverviewProps) => {
                             </div>
                             <button className="flex items-center justify-between">
                               <span className="sr-only">
-                                Go to order #{order.display_id}
+                                Xem đơn hàng #{order.display_id}
                               </span>
                               <ChevronDown className="-rotate-90" />
                             </button>
@@ -94,7 +94,7 @@ const Overview = ({ customer, orders }: OverviewProps) => {
                     )
                   })
                 ) : (
-                  <span>No recent orders</span>
+                  <span>Không có đơn hàng nào gần đây</span>
                 )}
               </ul>
             </div>

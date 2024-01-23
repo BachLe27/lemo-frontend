@@ -46,73 +46,75 @@ const AddAddress = ({ region }: { region: Region }) => {
         className="border border-ui-border-base rounded-rounded p-5 min-h-[220px] h-full w-full flex flex-col justify-between"
         onClick={open}
       >
-        <span className="text-base-semi">New address</span>
+        <span className="text-base-semi">Địa chỉ mới</span>
         <Plus />
       </button>
 
       <Modal isOpen={state} close={close}>
         <Modal.Title>
-          <Heading className="mb-2">Add address</Heading>
+          <Heading className="mb-2">Thêm địa chỉ</Heading>
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
             <div className="flex flex-col gap-y-2">
               <div className="grid grid-cols-2 gap-x-2">
+                
                 <Input
-                  label="First name"
-                  name="first_name"
-                  required
-                  autoComplete="given-name"
-                />
-                <Input
-                  label="Last name"
+                  label="Họ và tên đệm"
                   name="last_name"
                   required
                   autoComplete="family-name"
                 />
+                <Input
+                  label="Tên"
+                  name="first_name"
+                  required
+                  autoComplete="given-name"
+                />
               </div>
               <Input
-                label="Company"
+                label="Công ty"
                 name="company"
                 autoComplete="organization"
               />
               <Input
-                label="Address"
+                label="Địa chỉ"
                 name="address_1"
                 required
                 autoComplete="address-line1"
               />
-              <Input
+              {/* <Input
                 label="Apartment, suite, etc."
                 name="address_2"
                 autoComplete="address-line2"
-              />
+              /> */}
               <div className="grid grid-cols-[144px_1fr] gap-x-2">
-                <Input
+                {/* <Input
                   label="Postal code"
                   name="postal_code"
                   required
                   autoComplete="postal-code"
-                />
+                /> */}
                 <Input
-                  label="City"
+                  label="Quận / Huyện"
                   name="city"
                   required
                   autoComplete="locality"
                 />
               </div>
               <Input
-                label="Province / State"
+                label="Tỉnh / Thành Phố"
                 name="province"
                 autoComplete="address-level1"
+                required
               />
-              <CountrySelect
+              {/* <CountrySelect
                 region={region}
                 name="country_code"
                 required
                 autoComplete="country"
-              />
-              <Input label="Phone" name="phone" autoComplete="phone" />
+              /> */}
+              <Input label="Số điện thoại" name="phone" autoComplete="phone" required/>
             </div>
             {formState.error && (
               <div className="text-rose-500 text-small-regular py-2">

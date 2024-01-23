@@ -26,10 +26,9 @@ export default async function Addresses() {
   return (
     <div className="w-full">
       <div className="mb-8 flex flex-col gap-y-4">
-        <h1 className="text-2xl-semi">Shipping Addresses</h1>
+        <h1 className="text-2xl-semi">Địa chỉ giao hàng</h1>
         <p className="text-base-regular">
-          View and update your shipping addresses, you can add as many as you
-          like. Saving your addresses will make them available during checkout.
+          Xem và cập nhật địa chỉ giao hàng của bạn, bạn có thể thêm bao nhiêu tùy thích. Việc lưu địa chỉ của bạn sẽ giúp chúng có sẵn khi thanh toán.
         </p>
       </div>
       <AddressBook customer={customer} region={region} />

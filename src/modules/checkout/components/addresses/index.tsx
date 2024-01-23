@@ -56,7 +56,7 @@ const Addresses = ({
           level="h2"
           className="flex flex-row text-3xl-regular gap-x-2 items-baseline"
         >
-          Address
+          Địa chỉ
           {!isOpen && <CheckCircleSolid />}
         </Heading>
         {!isOpen && cart?.shipping_address && (
@@ -65,7 +65,7 @@ const Addresses = ({
               onClick={handleEdit}
               className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
             >
-              Edit
+              Sửa
             </button>
           </Text>
         )}
@@ -87,13 +87,13 @@ const Addresses = ({
                   level="h2"
                   className="text-3xl-regular gap-x-4 pb-6 pt-8"
                 >
-                  Billing address
+                  Địa chỉ thanh toán
                 </Heading>
 
                 <BillingAddress cart={cart} countryCode={countryCode} />
               </div>
             )}
-            <SubmitButton className="mt-6">Continue to delivery</SubmitButton>
+            <SubmitButton className="mt-6">Chọn hình thức vận chuyển</SubmitButton>
             <ErrorMessage error={message} />
           </div>
         </form>
@@ -105,7 +105,7 @@ const Addresses = ({
                 <div className="flex items-start gap-x-1 w-full">
                   <div className="flex flex-col w-1/3">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Shipping Address
+                      Địa chỉ giao hàng
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
                       {cart.shipping_address.first_name}{" "}
@@ -116,17 +116,18 @@ const Addresses = ({
                       {cart.shipping_address.address_2}
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
-                      {cart.shipping_address.postal_code},{" "}
-                      {cart.shipping_address.city}
+                      {/* {cart.shipping_address.postal_code},{" "} */}
+                      {cart.shipping_address.city},{" "}
+                      {cart.shipping_address.province}
                     </Text>
-                    <Text className="txt-medium text-ui-fg-subtle">
+                    {/* <Text className="txt-medium text-ui-fg-subtle">
                       {cart.shipping_address.country_code?.toUpperCase()}
-                    </Text>
+                    </Text> */}
                   </div>
 
                   <div className="flex flex-col w-1/3 ">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Contact
+                      Liên hệ
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
                       {cart.shipping_address.phone}
@@ -138,12 +139,12 @@ const Addresses = ({
 
                   <div className="flex flex-col w-1/3">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Billing Address
+                      Địa chỉ thanh toán
                     </Text>
 
                     {sameAsSBilling ? (
                       <Text className="txt-medium text-ui-fg-subtle">
-                        Billing- and delivery address are the same.
+                        Địa chỉ thanh toán và giao hàng giống nhau.
                       </Text>
                     ) : (
                       <>
@@ -156,12 +157,12 @@ const Addresses = ({
                           {cart.billing_address.address_2}
                         </Text>
                         <Text className="txt-medium text-ui-fg-subtle">
-                          {cart.billing_address.postal_code},{" "}
-                          {cart.billing_address.city}
+                          {cart.shipping_address.city},{" "}
+                          {cart.shipping_address.province}
                         </Text>
-                        <Text className="txt-medium text-ui-fg-subtle">
+                        {/* <Text className="txt-medium text-ui-fg-subtle">
                           {cart.billing_address.country_code?.toUpperCase()}
-                        </Text>
+                        </Text> */}
                       </>
                     )}
                   </div>

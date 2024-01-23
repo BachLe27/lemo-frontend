@@ -87,7 +87,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               {address.address_2 && <span>, {address.address_2}</span>}
             </span>
             <span>
-              {address.postal_code}, {address.city}
+             {address.city}
             </span>
             <span>
               {address.province && `${address.province}, `}

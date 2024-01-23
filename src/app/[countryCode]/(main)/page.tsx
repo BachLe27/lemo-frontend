@@ -8,9 +8,9 @@ import { getRegion } from "app/actions"
 import { ProductCollectionWithPreviews } from "types/global"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "Lemo - Always by your side",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+    "Mua len móc chất lượng tại LEMO. Chúng tôi cung cấp một loạt các sản phẩm len móc thủ công đẹp mắt. Khám phá bộ sưu tập của chúng tôi và tìm sản phẩm len móc phù hợp với phong cách của bạn ngay hôm nay!",
 }
 
 const getCollectionsWithProducts = async (

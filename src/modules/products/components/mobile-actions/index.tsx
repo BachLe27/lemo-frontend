@@ -115,10 +115,10 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                 isLoading={isAdding}
               >
                 {!variant
-                  ? "Select variant"
+                  ? "Chọn biến thể"
                   : !inStock
                   ? "Out of stock"
-                  : "Add to cart"}
+                  : "Thêm vào giỏ"}
               </Button>
             </div>
           </div>

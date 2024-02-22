@@ -7,13 +7,13 @@ import bgImage from '../../../../../public/nen.jpg'
 const Hero = () => {
   return (
     <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 w-full flex flex-row items-center small:p-32 gap-6">
+      <div className="absolute inset-0 z-10 w-full flex flex-col-reverse lg:flex-row items-center justify-center small:p-32 gap-6">
 
-        <div className="flex flex-col gap-5 w-1/2">
+        <div className="flex flex-col gap-5 w-1/2 items-center lg:items-start">
           <div className="flex flex-col gap-2">
             <Heading
               level="h1"
-              className="text-5xl text-amber-500 leading-10 font-bold uppercase"
+              className="text-3xl lg:text-5xl text-amber-500 leading-10 font-bold uppercase"
               >
               Lemo - Always by your side 
             </Heading>
@@ -21,15 +21,13 @@ const Hero = () => {
               Quà tặng handmade bằng len móc tại Hoà Lạc
             </p>
           </div>
-        
-          
-            <Button variant="primary" className="bg-amber-500 px-10 text-lg rounded-lg hover:bg-amber-400 text-black">
-              <Link
-                href="/store"
-              >
-                Mua ngay
-              </Link> 
-            </Button>
+          <Button variant="primary" className="bg-amber-500 px-10 text-lg rounded-lg hover:bg-amber-400 text-black">
+            <Link
+              href="/store"
+            >
+              Mua ngay
+            </Link> 
+          </Button>
         </div>
 
         <div className="flex justify-center w-1/2">
